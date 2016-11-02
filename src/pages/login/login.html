@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <img src="../../assets/icon/favicon.ico">
+    </ion-row>
+    <form>
+      <ion-list>
+        <ion-item>
+          <ion-label floating>Usuario</ion-label>
+          <ion-input type="text" name="user" [(ngModel)]="data.user"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Contraseña</ion-label>
+          <ion-input type="password" name="password" [(ngModel)]="data.password"></ion-input>
+        </ion-item>
+      </ion-list>
+      <ion-row>
+        <ion-col width-50>
+          <button ion-button icon-right [navPush]="newuser">
+            Registrarme
+            <ion-icon name="create"></ion-icon>
+          </button>
+        </ion-col>
+        <ion-col width-50>
+          <button ion-button icon-right full (click)="Clogin(data)">
+            Ingresar
+            <ion-icon name="log-in"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-grid> 
+</ion-content>
